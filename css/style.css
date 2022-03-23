@@ -73,3 +73,41 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 /*--------------------*/
+body {
+  background-color: #5fffff;
+}
+
+h1 {
+  text-align: center;
+  font-size: 50px;
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+}
+
+p {
+  text-align: center;
+  margin-top: 15px;
+}
+
+.sudoku-grid-container {
+  height: 540px;
+  width: 540px;
+  margin: 25px auto;
+}
+
+.sudoku-grid {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: (1fr)[9];
+  -ms-grid-columns: 1fr 0px 1fr 0px 1fr 0px 1fr 0px 1fr 0px 1fr 0px 1fr 0px 1fr 0px 1fr;
+      grid-template: repeat(9, 1fr)/repeat(9, 1fr);
+  grid-column-gap: 0px;
+}
+
+.cell {
+  border: solid black 1px;
+  width: 60px;
+  height: 60px;
+  text-align: center;
+  font-size: 30px;
+  background-color: #9cf3f3;
+}

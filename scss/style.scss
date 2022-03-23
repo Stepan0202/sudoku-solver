@@ -1,1 +1,46 @@
 @import "nullstyle.scss";
+$cell-size: 60px;
+$grid-container-size: $cell-size*9;
+body{
+    background-color: rgb(95, 255, 255);
+}
+
+h1{
+    text-align: center;
+    font-size: 50px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+p{
+    text-align: center;
+    margin-top: 15px;
+}
+.playfield-container {
+}
+.playfield {
+}
+.panel {
+}
+
+.sudoku-grid-container{
+    height: $grid-container-size;
+    width: $grid-container-size;
+    margin: 25px auto;
+    
+}
+
+.sudoku-grid {
+    display: grid;
+    grid-template: repeat(9,1fr) / repeat(9,1fr);
+    grid-column-gap: 0px;
+    
+    
+}
+.cell {
+    border: solid black 1px;
+    width: $cell-size;
+    height: $cell-size;
+    text-align: center;
+    font-size: 30px;
+    background-color: rgb(156, 243, 243);
+}
