@@ -3,27 +3,29 @@ $cell-size: 60px;
 $grid-container-size: $cell-size*9;
 body{
     background-color: rgb(95, 255, 255);
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 }
 
 h1{
     text-align: center;
     font-size: 50px;
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    
 }
 
 p{
     text-align: center;
     margin-top: 15px;
 }
-.playfield-container {
-}
-.playfield {
-}
-.panel {
-}
+// .playfield-container {
+// }
+// .playfield {
+// }
+// .panel {
+// }
 
 .sudoku-grid-container{
-    height: $grid-container-size;
+    display: grid;
+    height: ($grid-container-size + $cell-size);
     width: $grid-container-size;
     margin: 25px auto;
     
@@ -31,7 +33,7 @@ p{
 
 .sudoku-grid {
     display: grid;
-    grid-template: repeat(9,1fr) / repeat(9,1fr);
+    grid-template: repeat(10,1fr) / repeat(9,1fr);
     grid-column-gap: 0px;
     
     
@@ -43,4 +45,23 @@ p{
     text-align: center;
     font-size: 30px;
     background-color: rgb(156, 243, 243);
+}
+
+.button{
+    border-radius: 10px;
+    background-color:aquamarine;
+    margin: 10px auto;
+    height: $cell-size/2;
+    width: $cell-size*2;
+    text-align: center;
+    padding: 6px 0;
+}
+
+.control-panel{
+    display: inline-block;
+    grid-column-start: 1;
+    border: 1px solid blue;
+    text-align: center;
+    align-items: center;
+    font-family: monospace;
 }
