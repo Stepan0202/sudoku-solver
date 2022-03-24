@@ -22,19 +22,24 @@ var controller = {
 
 var model = {
    userArray: [["","","","","","","","",""],["","","","","","","","",""],["","","","","","","","",""],["","","","","","","","",""],["","","","","","","","",""],["","","","","","","","",""],["","","","","","","","",""],["","","","","","","","",""],["","","","","","","","",""]],
-
+    stopListRow: [[],[],[],[],[],[],[],[],[]],
+    stopListColumn: [[],[],[],[],[],[],[],[],[]],
+    stopListSquare: [[],[],[],[],[],[],[],[],[]],
    getModel: function(){
        var cells = document.getElementsByClassName("cell");
-       console.log(cells[0].value)
-       console.log( this.userArray[0].length);
-       console.log( this.userArray.length);
         for(var i = 0; i < this.userArray.length; i++){
             for(var j = 0; j < this.userArray[i].length; j++){
                 var cellNumber = j + this.userArray.length*i;
-                this.userArray[i][j] = cells[cellNumber].value;
+                this.userArray[i][j] , this.stopListRow[i][j] = cells[cellNumber].value;
+                
             }
         }
        
+},
+
+   fillStopLists: function(){
+   d
    }
+
     
 };
