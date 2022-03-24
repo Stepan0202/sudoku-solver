@@ -33,13 +33,15 @@ p{
 
 .sudoku-grid {
     display: grid;
-    grid-template: repeat(10,1fr) / repeat(9,1fr);
+    grid-template: repeat(9,1fr) / repeat(9,1fr);
     grid-column-gap: 0px;
+    border: 2px solid black;
     
     
 }
 .cell {
-    border: solid black 1px;
+    border-left: dashed black 0.5px;
+    border-top: dashed black 0.5px;
     width: $cell-size;
     height: $cell-size;
     text-align: center;
@@ -47,20 +49,28 @@ p{
     background-color: rgb(156, 243, 243);
 }
 
+.square{
+    border-right: solid black 3px;
+}
+
+.square-bottom{
+    border-bottom: solid black 3px;
+}
+
 .button{
     border-radius: 10px;
-    background-color:aquamarine;
+    background-color:rgb(26, 44, 38);
+    color:rgb(95, 255, 255);
     margin: 10px auto;
     height: $cell-size/2;
     width: $cell-size*2;
     text-align: center;
-    padding: 6px 0;
+    padding: 8px 0;
 }
 
 .control-panel{
     display: inline-block;
     grid-column-start: 1;
-    border: 1px solid blue;
     text-align: center;
     align-items: center;
     font-family: monospace;

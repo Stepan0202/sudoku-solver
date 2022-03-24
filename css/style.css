@@ -99,14 +99,16 @@ p {
 .sudoku-grid {
   display: -ms-grid;
   display: grid;
-  -ms-grid-rows: (1fr)[10];
+  -ms-grid-rows: (1fr)[9];
   -ms-grid-columns: 1fr 0px 1fr 0px 1fr 0px 1fr 0px 1fr 0px 1fr 0px 1fr 0px 1fr 0px 1fr;
-      grid-template: repeat(10, 1fr)/repeat(9, 1fr);
+      grid-template: repeat(9, 1fr)/repeat(9, 1fr);
   grid-column-gap: 0px;
+  border: 2px solid black;
 }
 
 .cell {
-  border: solid black 1px;
+  border-left: dashed black 0.5px;
+  border-top: dashed black 0.5px;
   width: 60px;
   height: 60px;
   text-align: center;
@@ -114,21 +116,29 @@ p {
   background-color: #9cf3f3;
 }
 
+.square {
+  border-right: solid black 3px;
+}
+
+.square-bottom {
+  border-bottom: solid black 3px;
+}
+
 .button {
   border-radius: 10px;
-  background-color: aquamarine;
+  background-color: #1a2c26;
+  color: #5fffff;
   margin: 10px auto;
   height: 30px;
   width: 120px;
   text-align: center;
-  padding: 6px 0;
+  padding: 8px 0;
 }
 
 .control-panel {
   display: inline-block;
   -ms-grid-column: 1;
       grid-column-start: 1;
-  border: 1px solid blue;
   text-align: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
